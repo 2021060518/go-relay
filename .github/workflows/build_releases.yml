@@ -3,9 +3,8 @@ permissions:
   contents: write
 
 on:
-  push:
-    tags:
-      - '*'
+  workflow_dispatch:
+
 jobs:
   release:
     runs-on: ubuntu-latest
