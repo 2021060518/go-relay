@@ -10,6 +10,7 @@ type Config struct {
 	Token    string `yaml:"token"`    // For relay mode
 	Username string `yaml:"username"` // For mirror mode
 	Password string `yaml:"password"` // For mirror mode
+	Proxy string `yaml:"proxy"` // For mirror mode
 }
 
 var CONFIG = Config{}

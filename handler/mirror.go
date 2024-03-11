@@ -18,7 +18,7 @@ func MirrorHandler(w http.ResponseWriter, r *http.Request) {
 	req.Header = r.Header.Clone()
 
 	// 创建一个代理地址的拨号器
-	dialer, err := proxy.SOCKS5("tcp", "172.17.0.5:1080", nil, proxy.Direct)
+	dialer, err := proxy.SOCKS5("tcp", common.CONFIG.Proxy, nil, proxy.Direct)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "can't connect to the proxy:", err)
 		os.Exit(1)
